@@ -32,10 +32,30 @@ Installation:
 
 7. Access the web application at http://localhost:8000 in your web browser.
 
-Usage:
-- Upon accessing the web application, you will see a list of tasks if any are present.
-- To add a new task, click on the "Add Task" button and fill out the form.
-- To edit a task, click on the "Edit" button next to the task you want to modify.
-- To mark a task as completed, click on the "Mark as Completed" button next to the task.
-- To delete a task, click on the "Delete" button next to the task.
+
+8. list of endpoints.
+   
+    GET /tasks/
+        Description: Retrieve a list of all tasks.
+        Method: GET
+
+    POST /tasks/add/
+        Description: Add a new task.
+        Method: POST
+        Parameters: title (string), description (string)
+
+    POST /tasks/edit/{task_id}/
+        Description: Edit an existing task.
+        Method: POST
+        Parameters: task_id (integer), title (string), description (string)
+
+    POST /tasks/complete/{task_id}/
+        Description: Mark a task as completed.
+        Method: POST
+        Parameters: task_id (integer)
+
+    POST /tasks/delete/{task_id}/
+        Description: Delete a task.
+        Method: POST
+        Parameters: task_id (integer)
 
